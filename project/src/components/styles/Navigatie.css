@@ -1,0 +1,29 @@
+nav {
+    background-color: white;
+    border-radius: 0px 0px 20px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav-item {
+    margin: 0px 10px;
+    text-decoration: none;
+    color: gray;
+}
+
+.nav-item:hover {
+    color: rgb(70, 70, 70);
+}
+
+.active {
+    font-weight: bold;
+    color: black;
+}
+
+.nav-insprong {
+    margin-top: 70px;
+}
