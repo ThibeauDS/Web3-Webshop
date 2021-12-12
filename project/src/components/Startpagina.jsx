@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles/Navigatie.css';
 import './styles/Main.css';
+import './styles/Startpagina.css';
 
 const Startpagina = () => {
     const dependencies = [
@@ -84,9 +85,9 @@ const Startpagina = () => {
                 <h2>Het team achter super webshop</h2>
                 <p>De react app wordt ontwikkeld door Thibeau De Smet. Een student aan HOGENT die de richting Graduaat - Programmeren volgt.</p>
                 <h3>Gebruikte dependencies</h3>
-                <ul>
+                <ul className="ul">
                     {dependencies.map((value, index) => (
-                        <li key={index}>
+                        <li key={index} className="li">
                             {value.name}: {value.versie}
                         </li>
                     ))}

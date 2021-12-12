@@ -1,0 +1,67 @@
+.landing_text {
+    vertical-align: center;
+    text-align: center;
+}
+
+.kader {
+    padding: 0px 20px 10px 20px;
+    width: max-content;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home {
+    display: table;
+    height: 100%;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero {
+    -webkit-transition: transform 0.5s ease-in-out;
+    -moz-transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+}
+.align-items-center {
+    align-items: center !important;
+}
+
+.vh-100 {
+    height: 100vh !important;
+}
+.position-relative {
+    position: relative !important;
+}
+.d-flex {
+    display: flex !important;
+}
+
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.text-center {
+    text-align: center !important;
+}
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) / -2);
+    margin-left: calc(var(--bs-gutter-x) / -2);
+}

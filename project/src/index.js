@@ -1,11 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navigatie from './components/Navigatie';
-import Startpagina from './components/Startpagina';
-import Footer from './components/Footer';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navigatie from "./components/Navigatie";
+import Startpagina from "./components/Startpagina";
+import Footer from "./components/Footer";
+import Producten from "./components/Producten";
+import NotFound from "./components/NotFound";
+import Winkelmandje from "./components/Winkelmandje";
+
+//TODO: Vragen hoe je react linkt met express. 2 aparte apps of 1 app
 
 ReactDOM.render(
     <React.StrictMode>
@@ -13,12 +18,14 @@ ReactDOM.render(
             <Navigatie />
             <Routes>
                 <Route path="/" element={<Startpagina />} />
-                <Route path="*" element={<p>404 NOT FOUND</p>} />
+                <Route path="/products" element={<Producten />} />
+                <Route path="/cart" element={<Winkelmandje />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
         </BrowserRouter>
     </React.StrictMode>,
-    document.getElementById('root')
+    document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
