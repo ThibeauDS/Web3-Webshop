@@ -10,10 +10,14 @@ const Producten = () => {
 
     useEffect(() => {
         setIsPageLoading(true);
-        Axios.get(`http://localhost:4000/products`)
+        Axios.get(`http://localhost:4000/products`, {
+            headers: {
+                "Access-Control-Allow-Origin": true,
+            },
+        })
             .then((response) => {
-                //setProducten(response.data);
-                console.log(response.data);
+                setProducten(response.data);
+                console.log(producten);
             })
             .catch((err) => {
                 console.log(err);

@@ -1,14 +1,20 @@
 require("dotenv").config();
 
-var express = require("express");
+const express = require("express");
+const cookieParser = require("cookie-parser");
+const logger = require("morgan");
 
-var indexRouter = require("./routes/index");
+const productsRouter = require("./routes/products");
 
-var app = express();
+const app = express();
 
+app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
 
-app.use("/", indexRouter);
+app.use("/products", productsRouter);
+
+console.log("API running at port 4000");
 
 module.exports = app;
