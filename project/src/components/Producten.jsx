@@ -10,7 +10,7 @@ const Producten = () => {
 
     useEffect(() => {
         setIsPageLoading(true);
-        Axios.get(`http://localhost:3000/products`)
+        Axios.get(`http://localhost:4000/products`)
             .then((response) => {
                 //setProducten(response.data);
                 console.log(response.data);

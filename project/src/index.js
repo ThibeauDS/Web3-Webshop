@@ -10,8 +10,6 @@ import Producten from "./components/Producten";
 import NotFound from "./components/NotFound";
 import Winkelmandje from "./components/Winkelmandje";
 
-//TODO: Vragen hoe je react linkt met express. 2 aparte apps of 1 app
-
 ReactDOM.render(
     <React.StrictMode>
         <BrowserRouter>

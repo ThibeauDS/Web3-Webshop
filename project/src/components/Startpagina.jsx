@@ -1,77 +1,77 @@
-import React from 'react';
-import './styles/Navigatie.css';
-import './styles/Main.css';
-import './styles/Startpagina.css';
+import React from "react";
+import "./styles/Navigatie.css";
+import "./styles/Main.css";
+import "./styles/Startpagina.css";
 
 const Startpagina = () => {
     const dependencies = [
         {
-            name: '@reduxjs/toolkit',
-            versie: '^1.6.2',
+            name: "@reduxjs/toolkit",
+            versie: "^1.6.2",
         },
         {
-            name: '@testing-library/jest-dom',
-            versie: '^5.16.1',
+            name: "@testing-library/jest-dom",
+            versie: "^5.16.1",
         },
         {
-            name: '@testing-library/react',
-            versie: '^11.2.7',
+            name: "@testing-library/react",
+            versie: "^11.2.7",
         },
         {
-            name: '@testing-library/user-event',
-            versie: '^12.8.3',
+            name: "@testing-library/user-event",
+            versie: "^12.8.3",
         },
         {
-            name: 'axios',
-            versie: '^0.24.0',
+            name: "axios",
+            versie: "^0.24.0",
         },
         {
-            name: 'dotenv',
-            versie: '^10.0.0',
+            name: "dotenv",
+            versie: "^10.0.0",
         },
         {
-            name: 'express',
-            versie: '~4.16.1',
+            name: "express",
+            versie: "~4.16.1",
         },
         {
-            name: 'express-validator',
-            versie: '^6.13.0',
+            name: "express-validator",
+            versie: "^6.13.0",
         },
         {
-            name: 'lodash',
-            versie: '^4.17.21',
+            name: "lodash",
+            versie: "^4.17.21",
         },
         {
-            name: 'mysql2',
-            versie: '^2.3.2',
+            name: "mysql2",
+            versie: "^2.3.2",
         },
         {
-            name: 'react',
-            versie: '^17.0.2',
+            name: "react",
+            versie: "^17.0.2",
         },
         {
-            name: 'react-dom',
-            versie: '^17.0.2',
+            name: "react-dom",
+            versie: "^17.0.2",
         },
         {
-            name: 'react-redux',
-            versie: '^7.2.6',
+            name: "react-redux",
+            versie: "^7.2.6",
         },
         {
-            name: 'react-router-dom',
-            versie: '^6.0.2',
+            name: "react-router-dom",
+            versie: "^6.0.2",
         },
         {
-            name: 'react-scripts',
-            versie: '4.0.3',
+            name: "react-scripts",
+            versie: "4.0.3",
         },
         {
-            name: 'redux',
-            versie: '^4.1.2',
+            name: "redux",
+            versie: "^4.1.2",
         },
         {
-            name: 'web-vitals',
-            versie: '^1.1.2',
+            name: "web-vitals",
+            versie: "^1.1.2",
         },
     ];
 
@@ -85,9 +85,9 @@ const Startpagina = () => {
                 <h2>Het team achter super webshop</h2>
                 <p>De react app wordt ontwikkeld door Thibeau De Smet. Een student aan HOGENT die de richting Graduaat - Programmeren volgt.</p>
                 <h3>Gebruikte dependencies</h3>
-                <ul className="ul">
+                <ul>
                     {dependencies.map((value, index) => (
-                        <li key={index} className="li">
+                        <li key={index}>
                             {value.name}: {value.versie}
                         </li>
                     ))}

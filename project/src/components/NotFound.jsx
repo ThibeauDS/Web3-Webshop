@@ -1,7 +1,7 @@
-import React from 'react';
-import './styles/Navigatie.css';
-import './styles/Main.css';
-import './styles/NotFound.css';
+import React from "react";
+import "./styles/Navigatie.css";
+import "./styles/Main.css";
+import "./styles/NotFound.css";
 
 const NotFound = () => {
     return (
