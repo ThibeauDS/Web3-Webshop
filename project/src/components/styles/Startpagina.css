@@ -3,7 +3,7 @@ ul {
     padding-left: 20px;
 }
 
-li::before {
+.li::before {
     content: "-";
     padding-right: 10px;
 }

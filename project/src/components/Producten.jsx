@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Axios from "axios";
 import "./styles/Main.css";
 import PageLoading from "./PageLoading";
-import Img from "../images/HMPDMM.jpg";
+import Product from "./Product";
 
 const Producten = () => {
     const [isPageLoading, setIsPageLoading] = useState(true);
@@ -17,7 +17,7 @@ const Producten = () => {
         })
             .then((response) => {
                 setProducten(response.data);
-                console.log(producten);
+                console.log(response.data);
             })
             .catch((err) => {
                 console.log(err);
@@ -29,9 +29,12 @@ const Producten = () => {
 
     if (isPageLoading) {
         return (
-            <>
-                <PageLoading />
-            </>
+            <div className="body">
+                <div className="nav-insprong">
+                    <h1>Producten</h1>
+                    <PageLoading />
+                </div>
+            </div>
         );
     }
 
@@ -39,8 +42,11 @@ const Producten = () => {
         <div className="body">
             <div className="nav-insprong">
                 <h1>Producten</h1>
-                {/* <img src={Img} /> */}
-                <img src="../images/HMPDMM.jpg" />
+                <>
+                    {producten.map((value, index) => (
+                        <Product key={index} Naam={value.Naam} Beschrijving={value.Beschrijving} Prijs={value.Prijs} Beeld={value.Beeld} />
+                    ))}
+                </>
             </div>
         </div>
     );

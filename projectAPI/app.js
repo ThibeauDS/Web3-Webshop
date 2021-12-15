@@ -1,4 +1,4 @@
-require("dotenv").config();
+require("dotenv").config({ path: "./.env" });
 
 const express = require("express");
 const cookieParser = require("cookie-parser");
@@ -13,6 +13,12 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+console.log(process.env.HOST);
+console.log(process.env.USER);
+console.log(process.env.PASSWORD);
+console.log(process.env.DB);
+console.log(process.env.PORT);
 
 app.use(cors());
 app.use("/products", productsRouter);

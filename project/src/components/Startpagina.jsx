@@ -87,7 +87,7 @@ const Startpagina = () => {
                 <h3>Gebruikte dependencies</h3>
                 <ul>
                     {dependencies.map((value, index) => (
-                        <li key={index}>
+                        <li key={index} className="li">
                             {value.name}: {value.versie}
                         </li>
                     ))}
