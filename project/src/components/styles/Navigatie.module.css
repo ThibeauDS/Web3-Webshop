@@ -1,4 +1,4 @@
-nav {
+.nav {
     background-color: white;
     border-radius: 0px 0px 20px 20px;
     position: fixed;
@@ -9,13 +9,13 @@ nav {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
-.nav-item {
+.nav_item {
     margin: 0px 10px;
     text-decoration: none;
     color: gray;
 }
 
-.nav-item:hover {
+.nav_item:hover {
     color: rgb(70, 70, 70);
 }
 
@@ -24,6 +24,6 @@ nav {
     color: black;
 }
 
-.nav-insprong {
+.nav_insprong {
     margin-top: 70px;
 }

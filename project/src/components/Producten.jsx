@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
-import "./styles/Main.css";
 import PageLoading from "./PageLoading";
 import Product from "./Product";
+
+import mainStyles from "./styles/Main.module.css";
+import navigatieStyles from "./styles/Navigatie.module.css";
 
 const Producten = () => {
     const [isPageLoading, setIsPageLoading] = useState(true);
@@ -17,7 +19,6 @@ const Producten = () => {
         })
             .then((response) => {
                 setProducten(response.data);
-                console.log(response.data);
             })
             .catch((err) => {
                 console.log(err);
@@ -29,8 +30,8 @@ const Producten = () => {
 
     if (isPageLoading) {
         return (
-            <div className="body">
-                <div className="nav-insprong">
+            <div className={mainStyles.body}>
+                <div className={navigatieStyles.nav_insprong}>
                     <h1>Producten</h1>
                     <PageLoading />
                 </div>
@@ -39,8 +40,8 @@ const Producten = () => {
     }
 
     return (
-        <div className="body">
-            <div className="nav-insprong">
+        <div className={mainStyles.body}>
+            <div className={navigatieStyles.nav_insprong}>
                 <h1>Producten</h1>
                 <>
                     {producten.map((value, index) => (

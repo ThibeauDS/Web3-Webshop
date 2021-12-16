@@ -1,7 +1,8 @@
 import React from "react";
-import "./styles/Navigatie.css";
-import "./styles/Main.css";
-import "./styles/Startpagina.css";
+
+import mainStyles from "./styles/Main.module.css";
+import navigatieStyles from "./styles/Navigatie.module.css";
+import startpaginaStyles from "./styles/Startpagina.module.css";
 
 const Startpagina = () => {
     const dependencies = [
@@ -76,8 +77,8 @@ const Startpagina = () => {
     ];
 
     return (
-        <div className="body">
-            <div className="nav-insprong">
+        <div className={mainStyles.body}>
+            <div className={navigatieStyles.nav_insprong}>
                 <h1>Welkom bij de super webshop van Web - 3</h1>
                 <h2>Wat is super webshop</h2>
                 <p>De super webshop is een eind werk voor het vak Web - 3.</p>
@@ -85,9 +86,9 @@ const Startpagina = () => {
                 <h2>Het team achter super webshop</h2>
                 <p>De react app wordt ontwikkeld door Thibeau De Smet. Een student aan HOGENT die de richting Graduaat - Programmeren volgt.</p>
                 <h3>Gebruikte dependencies</h3>
-                <ul>
+                <ul className={startpaginaStyles.ul}>
                     {dependencies.map((value, index) => (
-                        <li key={index} className="li">
+                        <li key={index} className={startpaginaStyles.li}>
                             {value.name}: {value.versie}
                         </li>
                     ))}

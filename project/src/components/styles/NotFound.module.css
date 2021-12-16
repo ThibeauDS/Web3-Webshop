@@ -25,27 +25,27 @@
     -moz-transition: transform 0.5s ease-in-out;
     transition: transform 0.5s ease-in-out;
 }
-.align-items-center {
+.align_items_center {
     align-items: center !important;
 }
 
-.vh-100 {
+.vh_100 {
     height: 100vh !important;
 }
-.position-relative {
+.position_relative {
     position: relative !important;
 }
-.d-flex {
+.d_flex {
     display: flex !important;
 }
 
 .container,
-.container-fluid,
-.container-lg,
-.container-md,
-.container-sm,
-.container-xl,
-.container-xxl {
+.container_fluid,
+.container_lg,
+.container_md,
+.container_sm,
+.container_xl,
+.container_xxl {
     width: 100%;
     padding-right: var(--bs-gutter-x, 0.75rem);
     padding-left: var(--bs-gutter-x, 0.75rem);
@@ -53,7 +53,7 @@
     margin-left: auto;
 }
 
-.text-center {
+.text_center {
     text-align: center !important;
 }
 .row {

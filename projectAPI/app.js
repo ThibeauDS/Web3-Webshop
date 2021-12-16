@@ -6,6 +6,7 @@ const logger = require("morgan");
 const cors = require("cors");
 
 const productsRouter = require("./routes/products");
+const imagesRouter = require("./routes/images");
 
 const app = express();
 
@@ -22,6 +23,8 @@ console.log(process.env.PORT);
 
 app.use(cors());
 app.use("/products", productsRouter);
+//app.use("/images", imagesRouter);
+app.use("/images", express.static("public/images"));
 
 console.log("API is running at port 4000");
 

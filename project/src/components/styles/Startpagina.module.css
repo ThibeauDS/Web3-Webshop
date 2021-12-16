@@ -1,4 +1,4 @@
-ul {
+.ul {
     list-style-type: none;
     padding-left: 20px;
 }
@@ -8,6 +8,6 @@ ul {
     padding-right: 10px;
 }
 
-.text-align-right {
+.text_align_right {
     text-align: right;
 }

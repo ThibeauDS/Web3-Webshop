@@ -1,9 +1,9 @@
-import React from 'react';
-import './styles/Footer.css';
+import React from "react";
+import footerStyles from "./styles/Footer.module.css";
 
 const Footer = () => {
     return (
-        <footer>
+        <footer className={footerStyles.footer}>
             <p>Naam: Thibeau De Smet</p>
             <p>Studentennummer: 074035td</p>
         </footer>

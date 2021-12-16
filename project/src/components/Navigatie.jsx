@@ -1,18 +1,23 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import './styles/Navigatie.css';
-import './styles/Main.css';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import navigatieStyles from "./styles/Navigatie.module.css";
+
+const getStyleForActive = ({ isActive }) => {
+    return {
+        className: isActive ? `${navigatieStyles.active} ${navigatieStyles.nav_item}` : navigatieStyles.nav_item,
+    };
+};
 
 const Navigatie = () => {
     return (
-        <nav>
-            <NavLink className="nav-item" to="/">
+        <nav className={navigatieStyles.nav}>
+            <NavLink className={getStyleForActive} to="/">
                 Startpagina
             </NavLink>
-            <NavLink className="nav-item" to="/products">
+            <NavLink className={getStyleForActive} to="/products">
                 Producten
             </NavLink>
-            <NavLink className="nav-item text-align-right" to="/cart">
+            <NavLink className={getStyleForActive} to="/cart">
                 Winkelmandje
             </NavLink>
         </nav>
