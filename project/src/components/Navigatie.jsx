@@ -3,9 +3,7 @@ import { NavLink } from "react-router-dom";
 import navigatieStyles from "./styles/Navigatie.module.css";
 
 const getStyleForActive = ({ isActive }) => {
-    return {
-        className: isActive ? `${navigatieStyles.active} ${navigatieStyles.nav_item}` : navigatieStyles.nav_item,
-    };
+    return isActive ? `${navigatieStyles.active} ${navigatieStyles.nav_item}` : navigatieStyles.nav_item;
 };
 
 const Navigatie = () => {

@@ -1,4 +1,59 @@
 .kader {
-    border: 1px solid black;
-    border-radius: 4;
+    border-radius: 4px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.kader .content {
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+}
+
+.kader .titel {
+    font-size: 1.35em;
+    font-weight: bold;
+    margin-top: 0;
+    margin-left: 20px;
+}
+
+.kader .beschrijving {
+    font-size: 1em;
+    text-align: left;
+    max-width: 600px;
+    margin-left: 20px;
+    margin-bottom: 0;
+}
+
+.kader .prijs {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 0;
+    color: rgb(15, 194, 187);
+}
+
+.prijs::before {
+    content: "€";
+    margin-right: 5px;
+    color: rgb(10, 173, 171);
+}
+
+.kader .beeld {
+    max-width: 200px;
+    height: max-content;
+    border-radius: 4px;
+    white-space: pre-line;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+.text_align_right {
+    text-align: right;
 }
