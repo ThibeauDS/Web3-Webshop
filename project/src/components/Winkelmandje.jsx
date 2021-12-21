@@ -5,7 +5,9 @@ import navigatieStyles from "./styles/Navigatie.module.css";
 const Winkelmandje = () => {
     return (
         <div className={mainStyles.body}>
-            <div className={navigatieStyles.nav_insprong}></div>
+            <div className={navigatieStyles.nav_insprong}>
+                <h1>Winkelmandje</h1>
+            </div>
         </div>
     );
 };
