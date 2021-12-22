@@ -1,5 +1,5 @@
 button {
-    padding: 8px;
+    padding: 6px 8px;
     border-radius: 4px;
     min-width: 100px;
 }
@@ -14,16 +14,27 @@ button.primary {
 
 button.primary:hover {
     background-color: rgb(25, 101, 169);
-    cursor: pointer;
 }
 
 button.primary:active {
     color: lightgray;
     background-color: rgb(49, 117, 177);
-    cursor: pointer;
 }
 
 button.secondary {
     color: black;
-    background-color: white;
+    border-width: 1px;
+    border-color: rgb(229, 229, 229) rgb(229, 229, 229) rgb(204, 204, 204) rgb(229, 229, 229);
+    border-style: solid;
+    background-color: rgb(251, 251, 251);
+}
+
+button.secondary:hover {
+    background-color: rgb(246, 246, 246);
+}
+
+button.secondary:active {
+    color: rgb(93, 93, 93);
+    background-color: rgb(245, 245, 245);
+    border-color: rgb(229, 229, 229);
 }

@@ -15,7 +15,7 @@ const Product = ({ naam, beschrijving, prijs, beeld }) => {
             </div>
             <div style={{ marginLeft: 20, textAlign: "right" }}>
                 <p className={`${productStyles.prijs}`}>{prijs.replace(/\./i, ",")}</p>
-                <Button content="In winkelmand" className="primary" title="Voeg toe aan winkelmandje" />
+                <Button content="In winkelmand" variant="primary" title="Voeg toe aan winkelmandje" />
             </div>
         </div>
     );

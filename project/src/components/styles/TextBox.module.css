@@ -1,0 +1,58 @@
+input {
+    padding: 6px 8px;
+    border-radius: 4px;
+    min-width: 50px;
+    color: black;
+    border-width: 1px;
+    border-color: rgb(229, 229, 229) rgb(229, 229, 229) rgb(204, 204, 204) rgb(229, 229, 229);
+    border-style: solid;
+    background-color: rgb(251, 251, 251);
+}
+
+input:focus {
+    background-color: rgb(255, 255, 255);
+    border-width: 1px 1px 2px 1px;
+    border-color: rgb(229, 229, 229) rgb(229, 229, 229) rgb(0, 85, 161) rgb(229, 229, 229);
+}
+
+input:focus:hover {
+    background-color: rgb(255, 255, 255);
+    border-width: 1px 1px 2px 1px;
+    border-color: rgb(229, 229, 229) rgb(229, 229, 229) rgb(0, 85, 161) rgb(229, 229, 229);
+}
+
+input:focus::placeholder {
+    color: rgb(173, 173, 173);
+}
+
+input:focus:hover::placeholder {
+    color: rgb(173, 173, 173);
+}
+
+input:focus:hover:-ms-input-placeholder {
+    color: rgb(173, 173, 173);
+}
+
+input:focus:-ms-input-placeholder {
+    color: rgb(173, 173, 173);
+}
+
+input:focus:hover::-ms-input-placeholder {
+    color: rgb(173, 173, 173);
+}
+
+input:focus::-ms-input-placeholder {
+    color: rgb(173, 173, 173);
+}
+
+input:hover {
+    background-color: rgb(246, 246, 246);
+}
+
+input:focus-visible {
+    outline: none;
+}
+
+label {
+    margin-bottom: 10px;
+}

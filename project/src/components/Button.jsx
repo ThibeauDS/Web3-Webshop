@@ -1,9 +1,9 @@
 import React from "react";
 import buttonStyle from "./styles/Button.module.css";
 
-const Button = ({ content, onClick, className, title }) => {
-    const getButtonStyle = (className) => {
-        switch (className) {
+const Button = ({ content, onClick, variant, title, type }) => {
+    const getButtonStyle = (variant) => {
+        switch (variant) {
             case "primary":
                 return buttonStyle.primary;
 
@@ -13,7 +13,7 @@ const Button = ({ content, onClick, className, title }) => {
         }
     };
     return (
-        <button onClick={onClick} className={getButtonStyle(className)} title={title}>
+        <button onClick={onClick} className={getButtonStyle(variant)} title={title} type={type}>
             {content}
         </button>
     );
