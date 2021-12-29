@@ -9,19 +9,25 @@ import Footer from "./components/Footer";
 import Producten from "./components/Producten";
 import NotFound from "./components/NotFound";
 import Winkelmandje from "./components/Winkelmandje";
+import Bevestiging from "./components/Bevestiging";
+import { Provider } from "react-redux";
+import { store } from "./store";
 
 ReactDOM.render(
     <React.StrictMode>
-        <BrowserRouter>
-            <Navigatie />
-            <Routes>
-                <Route path="/" element={<Startpagina />} />
-                <Route path="/products" element={<Producten />} />
-                <Route path="/cart" element={<Winkelmandje />} />
-                <Route path="*" element={<NotFound />} />
-            </Routes>
-            <Footer />
-        </BrowserRouter>
+        <Provider store={store}>
+            <BrowserRouter>
+                <Navigatie />
+                <Routes>
+                    <Route path="/" element={<Startpagina />} />
+                    <Route path="/products" element={<Producten />} />
+                    <Route path="/cart" element={<Winkelmandje />} />
+                    <Route path="/confirm" element={<Bevestiging />} />
+                    <Route path="*" element={<NotFound />} />
+                </Routes>
+                <Footer />
+            </BrowserRouter>
+        </Provider>
     </React.StrictMode>,
     document.getElementById("root")
 );

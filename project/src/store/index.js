@@ -1,8 +1,12 @@
-import { configureStore } from '@reduxjs/toolkit';
-import { throttle } from 'lodash';
-import { combineReducers } from 'redux';
+import { configureStore } from "@reduxjs/toolkit";
+import { throttle } from "lodash";
+import { reducer as productenReducer } from "./producten/slice";
+import { loadState, saveState } from "./localStorage";
+import { combineReducers } from "redux";
 
-const rootReducer = combineReducers({});
+const rootReducer = combineReducers({
+    producten: productenReducer,
+});
 
 const loadedStateFromLocalStorage = loadState();
 

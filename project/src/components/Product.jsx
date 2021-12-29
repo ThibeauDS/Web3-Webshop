@@ -1,9 +1,12 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { nieuwProductToevoegen } from "../store/producten/slice";
 import Button from "./Button";
 import productStyles from "./styles/Product.module.css";
 
-const Product = ({ naam, beschrijving, prijs, beeld }) => {
+const Product = ({ naam, beschrijving, prijs, beeld, object }) => {
     const array = beschrijving.split("\n");
+    const dispatch = useDispatch();
     return (
         <div className={productStyles.kader}>
             <div className={productStyles.content}>
@@ -15,7 +18,7 @@ const Product = ({ naam, beschrijving, prijs, beeld }) => {
             </div>
             <div style={{ marginLeft: 20, textAlign: "right" }}>
                 <p className={`${productStyles.prijs}`}>{prijs.replace(/\./i, ",")}</p>
-                <Button content="In winkelmand" variant="primary" title="Voeg toe aan winkelmandje" />
+                <Button content="In winkelmand" variant="primary" title="Voeg toe aan winkelmandje" onClick={() => dispatch(nieuwProductToevoegen(object))} />
             </div>
         </div>
     );

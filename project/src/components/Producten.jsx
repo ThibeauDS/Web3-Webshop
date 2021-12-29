@@ -45,7 +45,7 @@ const Producten = () => {
                 <h1>Producten</h1>
                 <>
                     {producten.map((value, index) => (
-                        <Product key={index} naam={value.Naam} beschrijving={value.Beschrijving} prijs={value.Prijs} beeld={value.Beeld} />
+                        <Product key={index} naam={value.Naam} beschrijving={value.Beschrijving} prijs={value.Prijs} beeld={value.Beeld} object={value} />
                     ))}
                 </>
             </div>
