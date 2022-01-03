@@ -4,9 +4,26 @@ import { nieuwProductToevoegen } from "../store/producten/slice";
 import Button from "./Button";
 import productStyles from "./styles/Product.module.css";
 
-const Product = ({ naam, beschrijving, prijs, beeld, object }) => {
+const Product = ({ naam, beschrijving, prijs, beeld, object, aantal }) => {
     const array = beschrijving.split("\n");
     const dispatch = useDispatch();
+    if (object === undefined || object === null) {
+        return (
+            <div className={productStyles.kader2}>
+                <div className={productStyles.content}>
+                    <img src={beeld} className={productStyles.beeld} alt={naam} />
+                    <div>
+                        <p className={productStyles.titel}>{naam}</p>
+                        <p className={productStyles.beschrijving}>{array.reduce((el, a) => el.concat(a, <br />), [])}</p>
+                    </div>
+                </div>
+                <div style={{ marginLeft: 20, textAlign: "right" }}>
+                    <p className={`${productStyles.prijs}`}>{prijs.replace(/\./i, ",")}</p>
+                    <p className={`${productStyles.aantal}`}>Aantal: {aantal}</p>
+                </div>
+            </div>
+        );
+    }
     return (
         <div className={productStyles.kader}>
             <div className={productStyles.content}>

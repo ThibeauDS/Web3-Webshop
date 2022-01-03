@@ -11,7 +11,30 @@
     margin-bottom: 20px;
 }
 
+.kader2 {
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.kader2 .aantal {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
 .kader .content {
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+}
+
+.kader2 .content {
     display: flex;
     text-align: left;
     justify-content: space-between;
@@ -24,12 +47,34 @@
     margin-left: 20px;
 }
 
+.kader2 .titel {
+    font-size: 1.35em;
+    font-weight: bold;
+    margin-top: 0;
+    margin-left: 20px;
+}
+
 .kader .beschrijving {
     font-size: 1em;
     text-align: left;
     max-width: 600px;
     margin-left: 20px;
     margin-bottom: 0;
+}
+
+.kader2 .beschrijving {
+    font-size: 1em;
+    text-align: left;
+    max-width: 600px;
+    margin-left: 20px;
+    margin-bottom: 0;
+}
+
+.kader2 .prijs {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 0;
+    color: rgb(15, 194, 187);
 }
 
 .kader .prijs {
@@ -46,6 +91,15 @@
 }
 
 .kader .beeld {
+    max-width: 200px;
+    height: max-content;
+    border-radius: 4px;
+    white-space: pre-line;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+.kader2 .beeld {
     max-width: 200px;
     height: max-content;
     border-radius: 4px;

@@ -38,3 +38,21 @@ button.secondary:active {
     background-color: rgb(245, 245, 245);
     border-color: rgb(229, 229, 229);
 }
+
+button.danger {
+    color: rgb(255, 255, 255);
+    border-width: 1px;
+    border-color: rgb(226, 172, 172) rgb(226, 172, 172) rgb(206, 147, 147) rgb(226, 172, 172);
+    border-style: solid;
+    background-color: rgb(255, 0, 0);
+}
+
+button.danger:hover {
+    background-color: rgb(253, 40, 40);
+}
+
+button.danger:active {
+    color: rgb(93, 93, 93);
+    background-color: rgb(245, 98, 98);
+    border-color: rgb(226, 172, 172);
+}

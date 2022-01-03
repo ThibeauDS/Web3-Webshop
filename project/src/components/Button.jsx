@@ -10,6 +10,8 @@ const Button = ({ content, onClick, variant, title, type }) => {
             case "secondary":
             default:
                 return buttonStyle.secondary;
+            case "danger":
+                return buttonStyle.danger;
         }
     };
     return (
