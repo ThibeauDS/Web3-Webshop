@@ -5,6 +5,7 @@ import Product from "./Product";
 
 import mainStyles from "./styles/Main.module.css";
 import navigatieStyles from "./styles/Navigatie.module.css";
+import productenStyles from "./styles/Producten.module.css";
 
 const Producten = () => {
     const [isPageLoading, setIsPageLoading] = useState(true);
@@ -42,12 +43,14 @@ const Producten = () => {
     return (
         <div className={mainStyles.body}>
             <div className={navigatieStyles.nav_insprong}>
-                <h1>Producten</h1>
-                <>
-                    {producten.map((value, index) => (
-                        <Product key={index} naam={value.Naam} beschrijving={value.Beschrijving} prijs={value.Prijs} beeld={value.Beeld} object={value} />
-                    ))}
-                </>
+                <div className={productenStyles.container}>
+                    <h1>Producten</h1>
+                    <>
+                        {producten.map((value, index) => (
+                            <Product key={index} naam={value.Naam} beschrijving={value.Beschrijving} prijs={value.Prijs} beeld={value.Beeld} object={value} />
+                        ))}
+                    </>
+                </div>
             </div>
         </div>
     );

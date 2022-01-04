@@ -79,20 +79,22 @@ const Startpagina = () => {
     return (
         <div className={mainStyles.body}>
             <div className={navigatieStyles.nav_insprong}>
-                <h1>Welkom bij de super webshop van Web - 3</h1>
-                <h2>Wat is super webshop</h2>
-                <p>De super webshop is een eind werk voor het vak Web - 3.</p>
-                <p>Deze app is ontwikkeld dankzij de magie van React. React is ontwikkeld door Facebook.</p>
-                <h2>Het team achter super webshop</h2>
-                <p>De react app wordt ontwikkeld door Thibeau De Smet. Een student aan HOGENT die de richting Graduaat - Programmeren volgt.</p>
-                <h3>Gebruikte dependencies</h3>
-                <ul className={startpaginaStyles.ul}>
-                    {dependencies.map((value, index) => (
-                        <li key={index} className={startpaginaStyles.li}>
-                            {value.name}: {value.versie}
-                        </li>
-                    ))}
-                </ul>
+                <div className={startpaginaStyles.container}>
+                    <h1>Welkom bij de super webshop van Web - 3</h1>
+                    <h2>Wat is super webshop</h2>
+                    <p>De super webshop is een eind werk voor het vak Web - 3.</p>
+                    <p>Deze app is ontwikkeld dankzij de magie van React. React is ontwikkeld door Facebook.</p>
+                    <h2>Het team achter super webshop</h2>
+                    <p>De react app wordt ontwikkeld door Thibeau De Smet. Een student aan HOGENT die de richting Graduaat - Programmeren volgt.</p>
+                    <h3>Gebruikte dependencies</h3>
+                    <ul className={startpaginaStyles.ul}>
+                        {dependencies.map((value, index) => (
+                            <li key={index} className={startpaginaStyles.li}>
+                                {value.name}: {value.versie}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             </div>
         </div>
     );

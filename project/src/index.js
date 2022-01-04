@@ -12,6 +12,7 @@ import Winkelmandje from "./components/Winkelmandje";
 import Bevestiging from "./components/Bevestiging";
 import { Provider } from "react-redux";
 import { store } from "./store";
+import Bestelling from "./components/Bestelling";
 
 ReactDOM.render(
     <React.StrictMode>
@@ -23,6 +24,7 @@ ReactDOM.render(
                     <Route path="/products" element={<Producten />} />
                     <Route path="/cart" element={<Winkelmandje />} />
                     <Route path="/confirm" element={<Bevestiging />} />
+                    <Route path="/order:id" element={<Bestelling />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
                 <Footer />

@@ -53,10 +53,12 @@ const Winkelmandje = () => {
         return (
             <div className={mainStyles.body}>
                 <div className={navigatieStyles.nav_insprong}>
-                    <h1>Winkelmandje</h1>
-                    <h2>Uw bestelling</h2>
-                    <div className={winkelmandjeStyles.kader}>
-                        <PageLoading />
+                    <div className={winkelmandjeStyles.container}>
+                        <h1>Winkelmandje</h1>
+                        <h2>Uw bestelling</h2>
+                        <div className={winkelmandjeStyles.kader}>
+                            <PageLoading />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -66,10 +68,12 @@ const Winkelmandje = () => {
         return (
             <div className={mainStyles.body}>
                 <div className={navigatieStyles.nav_insprong}>
-                    <h1>Winkelmandje</h1>
-                    <h2>Uw bestelling</h2>
-                    <div className={winkelmandjeStyles.kader}>
-                        <p>Geen producten in het winkelmandje</p>
+                    <div className={winkelmandjeStyles.container}>
+                        <h1>Winkelmandje</h1>
+                        <h2>Uw bestelling</h2>
+                        <div className={winkelmandjeStyles.kader}>
+                            <p>Geen producten in het winkelmandje</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -99,7 +103,7 @@ const Winkelmandje = () => {
                     </div>
                     <div style={{ textAlign: "right" }}>
                         <p style={{ display: "inline-block", marginRight: 10, fontSize: "1.2em", fontWeight: "bold" }}>Totaal: {totaalBedrag}</p>
-                        <Button content="Bestellen" title="Doorgaan met de bestelling" variant="primary" />
+                        <Button content="Bestellen" title="Doorgaan met de bestelling" variant="primary" herf="/confirm" />
                     </div>
                 </div>
             </div>

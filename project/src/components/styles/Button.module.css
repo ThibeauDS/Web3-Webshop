@@ -56,3 +56,65 @@ button.danger:active {
     background-color: rgb(245, 98, 98);
     border-color: rgb(226, 172, 172);
 }
+
+a {
+    padding: 6px 8px;
+    border-radius: 4px;
+    min-width: 100px;
+    text-decoration: none;
+    font-size: small;
+    cursor: default;
+}
+
+a.primary {
+    color: white;
+    border-width: 1px;
+    border-color: rgb(20, 98, 168) rgb(20, 98, 168) rgb(15, 61, 101) rgb(20, 98, 168);
+    border-style: solid;
+    background-color: rgb(0, 85, 161);
+}
+
+a.primary:hover {
+    background-color: rgb(25, 101, 169);
+}
+
+a.primary:active {
+    color: lightgray;
+    background-color: rgb(49, 117, 177);
+}
+
+a.secondary {
+    color: black;
+    border-width: 1px;
+    border-color: rgb(229, 229, 229) rgb(229, 229, 229) rgb(204, 204, 204) rgb(229, 229, 229);
+    border-style: solid;
+    background-color: rgb(251, 251, 251);
+}
+
+a.secondary:hover {
+    background-color: rgb(246, 246, 246);
+}
+
+a.secondary:active {
+    color: rgb(93, 93, 93);
+    background-color: rgb(245, 245, 245);
+    border-color: rgb(229, 229, 229);
+}
+
+a.danger {
+    color: rgb(255, 255, 255);
+    border-width: 1px;
+    border-color: rgb(226, 172, 172) rgb(226, 172, 172) rgb(206, 147, 147) rgb(226, 172, 172);
+    border-style: solid;
+    background-color: rgb(255, 0, 0);
+}
+
+a.danger:hover {
+    background-color: rgb(253, 40, 40);
+}
+
+a.danger:active {
+    color: rgb(93, 93, 93);
+    background-color: rgb(245, 98, 98);
+    border-color: rgb(226, 172, 172);
+}
