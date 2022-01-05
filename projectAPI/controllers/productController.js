@@ -7,6 +7,13 @@ const productController = {
             .then((results) => res.json(results))
             .catch((err) => res.status(500).send(`Error: ${err}`));
     },
+    GetProductById: (req, res) => {
+        const { id } = req.params;
+        product
+            .GetProductById(id)
+            .then((results) => res.json(results))
+            .catch((err) => res.status(500).send(`Error: ${err}`));
+    },
 };
 
 module.exports = productController;
