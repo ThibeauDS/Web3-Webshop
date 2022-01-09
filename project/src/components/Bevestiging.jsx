@@ -40,6 +40,7 @@ const Bevestiging = () => {
     const [producten, setProducten] = useState([]);
     const [productenAantal, setProductenAantal] = useState([]);
     const [totaalBedrag, setTotaalBedrag] = useState(0);
+    let orderNumber;
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const { values, errors, handleChange, handleSubmit } = useFormik({
@@ -85,11 +86,14 @@ const Bevestiging = () => {
                             console.log(err);
                         });
                     }
-                    dispatch(resetProducten());
-                    navigate(`/order/${response.data.insertId}`);
+                    orderNumber = response.data.insertId;
                 })
                 .catch((err) => {
                     console.log(err);
+                })
+                .finally(() => {
+                    dispatch(resetProducten());
+                    navigate(`/order${orderNumber}`);
                 });
         },
         validationSchema: schema,
